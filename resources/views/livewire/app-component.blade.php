@@ -1,6 +1,6 @@
 <div class="flex flex-col">
     <div class="text-5xl dark:text-white"><span class="text-blue-300">trial</span>scraper</div>
-    @if ($stage = 'input')
+    @if ($stage == 'input')
         <form wire:submit.prevent="uploadFiles">
             <div class="my-4 flex flex-col space-y-2">
                 <label class="text-lg dark:text-gray-300">
@@ -20,5 +20,8 @@
             </div>
             @endif
         </form>
+    @elseif ($stage == 'processing')
+        <div class="dark:text-white flex flex-row items-center space-x-4 mt-4"><img src="http://samherbert.net/svg-loaders/svg-loaders/oval.svg"><span>We're processing your files</span></div>
+    @elseif ($stage == 'ready')
     @endif
 </div>
