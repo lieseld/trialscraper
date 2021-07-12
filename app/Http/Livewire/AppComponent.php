@@ -25,7 +25,7 @@ class AppComponent extends Component
      *
      * @var string
      */
-    public string $stage = 'input';
+    public $stage = "input";
 
     /**
      * Uploaded files
